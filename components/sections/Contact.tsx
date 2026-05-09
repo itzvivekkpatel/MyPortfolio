@@ -148,7 +148,7 @@ export default function Contact() {
                     type="text"
                     value={form.name}
                     onChange={handleChange}
-                    placeholder="Enter your name"
+                    placeholder="Enter your designation"
                     required
                     className="bg-black border-[2px] border-white text-white font-inter text-base p-3 focus:border-[3px] focus:outline-none focus:ring-0 placeholder-white/40 w-full"
                   />

@@ -17,10 +17,8 @@ export default function TimelineEntry({
 }: TimelineEntryProps) {
   return (
     <div className="relative pl-8 pb-8 last:pb-0">
-      {/* Timeline dot */}
-      <div className="absolute left-0 top-1 w-[14px] h-[14px] bg-black border-[2px] border-black" />
-      {/* Timeline line */}
-      <div className="absolute left-[6px] top-[18px] bottom-0 w-[3px] bg-black last:hidden" />
+      {/* Timeline dot (centered on parent's 3px left border) */}
+      <div className="absolute -left-[9.5px] top-1.5 w-4 h-4 bg-black border-[2px] border-white" />
       {/* Content card */}
       <div className="border-[2px] border-black p-4 shadow-box hover:-translate-y-1 transition-transform bg-white">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b-[2px] border-black pb-2 mb-2">
