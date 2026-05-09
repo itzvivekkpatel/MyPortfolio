@@ -39,7 +39,7 @@ export default function Hero() {
           <BoxButton variant="solid" href="/projects">
             VIEW PROJECTS
           </BoxButton>
-          <BoxButton variant="outline" href="/resume.pdf">
+          <BoxButton variant="outline" href="/resume.pdf" external>
             DOWNLOAD RESUME
           </BoxButton>
         </div>

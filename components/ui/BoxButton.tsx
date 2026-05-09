@@ -8,6 +8,7 @@ interface BoxButtonProps {
   href?: string;
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
+  external?: boolean;
 }
 
 export default function BoxButton({
@@ -16,9 +17,10 @@ export default function BoxButton({
   href,
   onClick,
   type = "button",
+  external = false,
 }: BoxButtonProps) {
   const baseClasses =
-    "inline-flex items-center justify-center font-mono text-sm uppercase tracking-widest px-6 py-3 border-[2px] shadow-box hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-150 cursor-pointer";
+    "inline-flex items-center justify-center font-mono text-sm uppercase tracking-widest px-6 py-3 border-[2px] shadow-box hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-150 cursor-pointer text-center";
 
   const variantClasses =
     variant === "solid"
@@ -28,6 +30,13 @@ export default function BoxButton({
   const className = `${baseClasses} ${variantClasses}`;
 
   if (href) {
+    if (external) {
+      return (
+        <a href={href} className={className} target="_blank" rel="noopener noreferrer">
+          {children}
+        </a>
+      );
+    }
     return (
       <Link href={href} className={className}>
         {children}
